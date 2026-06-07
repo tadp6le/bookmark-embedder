@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Embedder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📌 Bookmark Embedder</h1>
+      <div class="controls">
+        <label class="switch">
+          <input type="checkbox" id="dataSaverToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Data Saver Mode</span>
+      </div>
+    </header>
+
+    <div class="add-section">
+      <button id="addBtn" class="btn">+ Add Bookmark</button>
+    </div>
+
+    <div id="formContainer" class="form-container hidden">
+      <div class="form-card">
+        <input type="url" id="urlInput" placeholder="Paste a link (YouTube, image, video, any page)" autofocus>
+        <button id="fetchBtn" class="btn">Fetch Info</button>
+        <div id="fetchStatus"></div>
+        <div id="editFields" class="hidden">
+          <input type="text" id="titleInput" placeholder="Title">
+          <textarea id="descInput" placeholder="Write something about this link..."></textarea>
+          <button id="saveBtn" class="btn primary">Save Bookmark</button>
+          <button id="cancelBtn" class="btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="bookmarksList" class="bookmarks-list"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
